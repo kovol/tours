@@ -1,0 +1,36 @@
+@keyframes moveInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-10rem);
+	}
+	85% {
+		transform: translateX(1rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes moveInRight {
+	from {
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+	85% {
+		transform: translateX(-1rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes moveInBottom {
+	from {
+		opacity: 0;
+		transform: translateY(4rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
