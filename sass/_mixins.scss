@@ -1,0 +1,38 @@
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+// 	MEDIA QUERIES
+
+// 0-600px Phone
+// 600-900px Tablet portrait
+// 900-1200px Tablet landscape
+// 1800+ Big desktop
+
+
+
+// breakpoint argument choices
+// phone
+// tab-port
+// tab-land
+// tabpdesktop
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: (600/16)+em) {@content};
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: (900/16)+em) {@content};
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: (1200/16)+em) {@content};
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: (1800/16)+em) {@content};
+	}
+ }
